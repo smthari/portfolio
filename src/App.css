@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --clr-primary: #619ef9;
+  --clr-second: #eef0f4;
+  --clr-text: #655b5b;
+  --linear-text: linear-gradient(
+    122.46deg,
+    #4f607a 39.14%,
+    rgba(47, 32, 227, 0.74) 57.2%
+  );
+  --font-family: "Roboto", sans-serif;
+  --soft-ui: drop-shadow(8px 8px 12px #c3c5c8)
+    drop-shadow(-8px -8px 12px #ffffff);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
+  background-color: var(--clr-second);
+}
+
+section {
   align-items: center;
+  display: flex;
+  margin: auto;
+  min-height: 75vh;
+  width: 85%;
+}
+
+/* home styling  */
+.home,
+.about {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  min-height: 100vh;
+  width: 90%;
+}
+
+.intro,
+.aboutme {
+  flex: 1 1;
+}
+
+.intro .intro-title,
+.about .about-title {
+  font-size: 2rem;
+  /* width: fit-content; */
+  color: var(--clr-text);
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.about-title {
+  margin-bottom: 2rem;
+}
+
+.intro .intro-title .linear,
+.about .about-title .linear {
+  background: var(--linear-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro .intro-subtitle,
+.aboutme .about-subtitle {
+  color: var(--clr-text);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.8vw;
+  line-height: 6vw;
+}
+
+.aboutme .about-subtitle {
+  font-size: 1.8vw;
+  line-height: 3vw;
+  width: 90%;
+}
+
+.profile {
+  display: flex;
+  flex: 1 1;
+  height: 50vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.skills {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile_image {
+  box-sizing: border-box;
+  position: absolute;
+  width: 25%;
+  filter: var(--soft-ui);
+  border-radius: 750px;
+  border: 8px solid var(--clr-second);
+  z-index: 1;
+}
+
+.social {
+  display: flex;
+  width: fit-content;
+  margin-top: 1.5vw;
+}
+
+.sociallist:nth-child(1) {
+  margin: 0;
+}
+
+.sociallist {
+  list-style: none;
+  width: 3rem;
+  height: 3rem;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 1rem;
+  background-color: var(--clr-second);
+  border: 2px solid #fff;
+  filter: var(--soft-ui);
+}
+
+.social .sociallist .social-icon {
+  text-align: center;
+  display: flex;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+}
+
+.social .sociallist:hover {
+  color: var(--clr-primary);
+  -webkit-transform: translateY(-10%);
+  transform: translateY(-10%);
+  transition: 0.2s all linear;
+  cursor: pointer;
+}
+
+/* skills tags */
+.tags {
+  width: 100%;
+}
+
+.tags-cta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tags-cta:nth-child(1) {
+  margin-bottom: 2rem;
+}
+
+.cta-tag {
+  height: 50px;
+  width: max-content;
+  background-color: var(--clr-second);
+  filter: var(--soft-ui);
+  color: var(--clr-primary);
+  border: 2px solid #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px;
+  outline: none;
+  padding: 1.9rem;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+
+.skillsSubtitle {
+  color: var(--clr-text);
+  margin: 1rem 1.2rem;
+}
+
+.skillsSubtitle:nth-last-child(2) {
+  margin-top: 2.5rem;
 }
