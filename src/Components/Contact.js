@@ -30,12 +30,7 @@ function Contact() {
           <Social />
         </div>
         <div className="contactForm">
-          <form
-            method="POST"
-            action="/success"
-            name="contact"
-            data-netlify="true"
-          >
+          <form method="POST" name="contact" data-netlify="true">
             <input
               name="name"
               type="text"
