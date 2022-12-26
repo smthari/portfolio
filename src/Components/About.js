@@ -9,9 +9,12 @@ function About() {
             About <mark className="linear">Me</mark>
           </h2>
           <p className="about-subtitle">
-            I'm Sumit. Frontend Dev based in Mumbai India. Currently pursing BCA
-            1st Year I enjoy coding a beautiful websites with my prior frontend
-            skills using JavaScript, React etc..
+            I'm Frontend Dev based in Mumbai India. Currently pursing BCA 1st
+            Year
+          </p>
+          <p className="about-subtitle">
+            I enjoy coding a beautiful websites with my prior frontend skills
+            using JavaScript, React etc..
           </p>
         </div>
         <div className="skills">

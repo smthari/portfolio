@@ -37,11 +37,35 @@ section {
   width: 85%;
 }
 
+h2:hover {
+  -webkit-transform: translateY(-10%);
+  transform: translateY(-10%);
+  cursor: pointer;
+  transition: all 0.5s linear;
+  background-image: linear-gradient(
+    0deg,
+    rgba(180, 170, 255, 0.4),
+    rgba(180, 170, 255, 0.4) 30%,
+    transparent 40%,
+    transparent
+  );
+  border-bottom: none;
+  color: inherit;
+  width: max-content;
+}
+
 /* home styling  */
 .home,
 .about {
   align-items: center;
   display: flex;
+  margin: auto;
+  min-height: 100vh;
+  width: 90%;
+}
+
+.projectsContainer {
+  align-items: center;
   margin: auto;
   min-height: 100vh;
   width: 90%;
@@ -53,28 +77,42 @@ section {
 }
 
 .intro .intro-title,
-.about .about-title {
+.about .about-title,
+.projects .projectsTitle,
+.ProjectTitle {
   font-size: 2rem;
-  /* width: fit-content; */
   color: var(--clr-text);
   font-size: 60px;
   font-weight: 600;
 }
 
-.about-title {
+.ProjectTitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about-title,
+.projectsTitle {
   margin-bottom: 2rem;
 }
 
 .intro .intro-title .linear,
-.about .about-title .linear {
+.about .about-title .linear,
+.projects .projectsTitle .linear,
+.ProjectTitle .linear {
   background: var(--linear-text);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.projects .projectsTitle .linear {
+  text-align: center;
+}
+
 .intro .intro-subtitle,
-.aboutme .about-subtitle {
+.aboutme .about-subtitle,
+.projectDetail {
   color: var(--clr-text);
   font-style: normal;
   font-weight: 500;
@@ -86,6 +124,118 @@ section {
   font-size: 1.8vw;
   line-height: 3vw;
   width: 90%;
+  margin-bottom: 1rem;
+}
+
+.projectDetail {
+  font-size: 1.2rem;
+  line-height: 2vw;
+}
+
+.project {
+  display: grid;
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.project:nth-of-type(even) .ProjectImg_Wrapper {
+  grid-column: 5/-1;
+  grid-row: 1/1;
+  height: 30rem;
+  max-width: 3237px;
+  display: block;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project:nth-of-type(even) .ProjectImg_Wrapper .projectImg {
+  width: 100%;
+  height: 100%;
+  filter: var(--soft-ui);
+  border: 8px solid #fff;
+  background-color: var(--clr-second);
+}
+
+.project:nth-of-type(odd) .ProjectImg_Wrapper .projectImg {
+  width: 100%;
+  height: 100%;
+  filter: var(--soft-ui);
+  border: 8px solid #fff;
+  background-color: var(--clr-second);
+}
+
+.project:nth-of-type(even) .project-info {
+  grid-column: 2 / span 7;
+  grid-row: 1/1;
+  text-align: left;
+}
+
+.ProjectImg_Wrapper,
+.project-info {
+  grid-row: 1/1;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+}
+
+.ProjectImg_Wrapper {
+  grid-column: 1 / 7;
+  height: 100rem;
+  max-width: 3237px;
+  display: block;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.projectImg::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+}
+
+.projectImg {
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.projectImg:hover {
+  opacity: 1;
+  transition: 0.2s all linear;
+  cursor: pointer;
+}
+
+.project-info {
+  z-index: 1;
+  grid-column: 5/12;
+  background: var(--clr-primary);
+  padding: 2rem 2rem;
+  background-color: var(--clr-second);
+  border: 8px solid #fff;
 }
 
 .profile {
@@ -118,7 +268,7 @@ section {
 }
 
 .sociallist:nth-child(1) {
-  margin: 0;
+  margin: 0 1rem 0 0;
 }
 
 .sociallist {
@@ -206,4 +356,140 @@ section {
 ::-webkit-scrollbar-thumb {
   background: var(--clr-primary);
   height: 2px;
+}
+
+.contact {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.contactContent {
+  width: 35%;
+  display: block;
+  margin-left: 7rem;
+  margin-right: 8rem;
+  border-radius: 0.5rem;
+}
+
+.contact-title {
+  font-size: 2rem;
+  color: var(--clr-text);
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.contact-title .linear {
+  background: var(--linear-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-paragraph {
+  color: var(--clr-text);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vw;
+  line-height: 2.2vw;
+}
+
+.contact-paragraph:nth-child(1) {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-input {
+  color: var(--clr-text);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid var(--clr-primary);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.contact-input:focus {
+  border: 2px solid var(--clr-text);
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: var(--clr-primary);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: var(--clr-second);
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+}
+
+[type="submit"]:hover {
+  background-color: var(--clr-text);
+  color: var(--clr-second);
+}
+
+.contactForm {
+  width: 50%;
+  padding: 0 10rem 0 0;
+}
+
+.contact-paragraph a {
+  margin: 0 0.5rem;
+  background-image: linear-gradient(
+    0deg,
+    rgba(180, 170, 255, 0.4),
+    rgba(180, 170, 255, 0.4) 30%,
+    transparent 40%,
+    transparent
+  );
+  border-bottom: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 912px) {
+  .contact {
+    height: max-content;
+    flex-direction: column;
+  }
+
+  .contactContent {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .contactForm {
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0 2rem 0;
+  }
+
+  .contact-paragraph {
+    width: 100%;
+  }
 }
