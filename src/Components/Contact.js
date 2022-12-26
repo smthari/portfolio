@@ -16,7 +16,6 @@ function Contact() {
             In case you want to connect you can check below where you can find
             me or if you prefer just drop me an
             <a
-              href="#"
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => {
