@@ -26,7 +26,7 @@ function Contact() {
           <Social />
         </div>
         <div className="contactForm">
-          <form method="POST" name="contact" netlify>
+          <form method="POST" data-netlify="true">
             <input
               name="name"
               type="text"
@@ -47,7 +47,7 @@ function Contact() {
               className="contact-input"
               placeholder="Message"
             ></textarea>
-            <input type="submit" value="SUBMIT" />
+            <button type="submit">submit</button>
           </form>
         </div>
       </div>
