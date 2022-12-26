@@ -16,12 +16,9 @@ function Contact() {
             In case you want to connect you can check below where you can find
             me or if you prefer just drop me an
             <a
+              href="mailto:smtharijan@email.com"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => {
-                window.location.href = "mailto:smtharijan@email.com";
-                e.preventDefault();
-              }}
             >
               Email
             </a>
