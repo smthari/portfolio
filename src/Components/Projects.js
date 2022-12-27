@@ -32,18 +32,7 @@ function Projects() {
                 <li className="sociallist">
                   <a
                     className="social-icon"
-                    href="https://github.com/smthari"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BsGithub></BsGithub>
-                  </a>
-                </li>
-
-                <li className="sociallist">
-                  <a
-                    className="social-icon"
-                    href="https://www.instagram.com/codingsumit/"
+                    href="https://www.instagram.com/frontendsprojects/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -54,7 +43,7 @@ function Projects() {
                 <li className="sociallist">
                   <a
                     className="social-icon"
-                    href="https://www.instagram.com/codingsumit/"
+                    href="https://frontendsprojects.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -102,7 +91,7 @@ function Projects() {
                 <li className="sociallist">
                   <a
                     className="social-icon"
-                    href="https://www.instagram.com/codingsumit/"
+                    href="https://codingsumit.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -130,7 +119,7 @@ function Projects() {
                 <li className="sociallist">
                   <a
                     className="social-icon"
-                    href="https://github.com/smthari"
+                    href="https://github.com/smthari/celebrity-database"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -141,18 +130,7 @@ function Projects() {
                 <li className="sociallist">
                   <a
                     className="social-icon"
-                    href="https://www.instagram.com/codingsumit/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ImInstagram></ImInstagram>
-                  </a>
-                </li>
-
-                <li className="sociallist">
-                  <a
-                    className="social-icon"
-                    href="https://www.instagram.com/codingsumit/"
+                    href="https://celebrity-database.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

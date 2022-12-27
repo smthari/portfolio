@@ -47,7 +47,7 @@ function Contact() {
               className="contact-input"
               placeholder="Message"
             ></textarea>
-            <button type="submit">submit</button>
+            <button type="submit">SUBMIT</button>
           </form>
         </div>
       </div>
