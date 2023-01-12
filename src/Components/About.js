@@ -14,7 +14,7 @@ function About() {
           </p>
           <p className="about-subtitle">
             I enjoy coding a beautiful websites with my prior frontend skills
-            JavaScript, React etc..
+            JavaScript, React
           </p>
         </div>
         <div className="skills">
