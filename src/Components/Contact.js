@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Social from "./Social";
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const form = useRef(null);
+
+  const HandlerName = (event) => {
+    setName(event.target.value);
+  };
+
+  const HandlerEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const Handlermessage = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const HandlerSubmit = (event) => {
+    alert(`${name} ${email} ${message}`);
+    form.reset();
+    event.preventDefault();
+  };
+
   return (
     <section>
       <div className="contact">
@@ -26,23 +50,29 @@ function Contact() {
           <Social />
         </div>
         <div className="contactForm">
-          <form method="POST" data-netlify="true">
+          <form onSubmit={HandlerSubmit} ref={form} data-netlify="true">
             <input
               name="name"
               type="text"
+              value={name}
+              onChange={HandlerName}
               className="contact-input"
               required
               placeholder="Name"
             />
             <input
               name="email"
-              type="text"
+              type="email"
+              value={email}
+              onChange={HandlerEmail}
               required
               className="contact-input"
               placeholder="Email"
             />
             <textarea
               name="Message"
+              value={message}
+              onChange={Handlermessage}
               required
               className="contact-input"
               placeholder="Message"
