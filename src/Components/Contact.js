@@ -38,6 +38,7 @@ function Contact() {
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
 
+    alert(name + " " + email + " " + message);
     e.preventDefault();
   };
 
@@ -65,7 +66,7 @@ function Contact() {
           <Social />
         </div>
         <div className="contactForm">
-          <form onSubmit={handleSubmit} data-netlify="true">
+          <form onSubmit={handleSubmit}>
             <input
               name="name"
               type="text"
