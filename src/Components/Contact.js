@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import Social from "./Social";
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+import { useForm, ValidationError } from "@formspree/react";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const [state, handleSubmit] = useForm("mzbqzvwv");
+  if (state.succeeded) {
+    alert("Form Submitted, I'll get back to you shortly");
+  }
 
   const HandlerName = (event) => {
     setName(event.target.value);
@@ -22,24 +22,6 @@ function Contact() {
 
   const Handlermessage = (event) => {
     setMessage(event.target.value);
-  };
-
-  /* const HandlerSubmit = (event) => {
-    alert(`${name} ${email} ${message}`);
-    event.preventDefault();
-  }; */
-
-  const handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
-    alert(name + " " + email + " " + message);
-    e.preventDefault();
   };
 
   return (
@@ -76,6 +58,7 @@ function Contact() {
               required
               placeholder="Name"
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
             <input
               name="email"
               type="email"
@@ -85,15 +68,27 @@ function Contact() {
               className="contact-input"
               placeholder="Email"
             />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
             <textarea
               name="Message"
+              required
               value={message}
               onChange={Handlermessage}
-              required
               className="contact-input"
               placeholder="Message"
             ></textarea>
-            <button type="submit">SUBMIT</button>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+            <button type="submit" disabled={state.submitting}>
+              SUBMIT
+            </button>
           </form>
         </div>
       </div>
