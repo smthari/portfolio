@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import Social from "./Social";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,6 +28,18 @@ function Contact() {
     alert(`${name} ${email} ${message}`);
     event.preventDefault();
   }; */
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", name, email, message }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
 
   return (
     <section>
@@ -47,7 +65,7 @@ function Contact() {
           <Social />
         </div>
         <div className="contactForm">
-          <form name="contact" method="POST" data-netlify="true">
+          <form onSubmit={handleSubmit} data-netlify="true">
             <input
               name="name"
               type="text"
