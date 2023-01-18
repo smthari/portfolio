@@ -18,10 +18,10 @@ function Contact() {
     setMessage(event.target.value);
   };
 
-  const HandlerSubmit = (event) => {
+  /* const HandlerSubmit = (event) => {
     alert(`${name} ${email} ${message}`);
     event.preventDefault();
-  };
+  }; */
 
   return (
     <section>
@@ -47,12 +47,7 @@ function Contact() {
           <Social />
         </div>
         <div className="contactForm">
-          <form
-            name="contact"
-            method="POST"
-            onSubmit={HandlerSubmit}
-            data-netlify="true"
-          >
+          <form name="contact" method="POST" data-netlify="true">
             <input
               name="name"
               type="text"
