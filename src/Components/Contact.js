@@ -48,8 +48,8 @@ function Contact() {
         </div>
         <div className="contactForm">
           <form
-            name="contact form"
-            method="post"
+            name="contact"
+            method="POST"
             onSubmit={HandlerSubmit}
             data-netlify="true"
           >
