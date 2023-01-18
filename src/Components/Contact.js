@@ -1,12 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Social from "./Social";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  const form = useRef(null);
 
   const HandlerName = (event) => {
     setName(event.target.value);
@@ -22,7 +20,6 @@ function Contact() {
 
   const HandlerSubmit = (event) => {
     alert(`${name} ${email} ${message}`);
-    form.reset();
     event.preventDefault();
   };
 
@@ -50,7 +47,12 @@ function Contact() {
           <Social />
         </div>
         <div className="contactForm">
-          <form onSubmit={HandlerSubmit} ref={form} data-netlify="true">
+          <form
+            name="contact form"
+            method="post"
+            onSubmit={HandlerSubmit}
+            data-netlify="true"
+          >
             <input
               name="name"
               type="text"
