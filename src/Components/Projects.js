@@ -1,7 +1,4 @@
 import React from "react";
-import Project1 from "../Assets/Images/Project1.png";
-import Project2 from "../Assets/Images/Project2.png";
-import Project3 from "../Assets/Images/Project3.png";
 
 import { ImInstagram } from "react-icons/im";
 import { BsGithub } from "react-icons/bs";
