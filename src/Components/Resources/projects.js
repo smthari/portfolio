@@ -12,7 +12,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "FRONTENDS PROJECTS | Ed-Tech Platform",
+    title: "CODINGSUMIT | Tech Blog",
     subTitle: "Created this blog to share web dev tutorial tips and tricks",
     img: Project2,
     igUrl: "https://www.instagram.com/codingsumit/",
