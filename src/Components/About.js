@@ -1,4 +1,5 @@
 import React from "react";
+import { programming, tools } from "./Resources/Skills";
 
 function About() {
   return (
@@ -21,24 +22,16 @@ function About() {
           <div className="tags">
             <h2 className="skillsSubtitle"> Programming</h2>
             <div className="tags-cta">
-              <button className="cta-tag">HTML</button>
-              <button className="cta-tag">CSS</button>
-              <button className="cta-tag">JavaScript</button>
-              <button className="cta-tag">React</button>
-              <button className="cta-tag">Gatsby</button>
-              <button className="cta-tag">Bootstrap</button>
+              {programming.map((item) => {
+                return <button className="cta-tag">{item.lang}</button>;
+              })}
             </div>
 
             <h2 className="skillsSubtitle">Tools</h2>
             <div className="tags-cta">
-              <button className="cta-tag">NPM</button>
-              <button className="cta-tag">Notion</button>
-              <button className="cta-tag">VS Studio</button>
-              <button className="cta-tag">Contentful</button>
-              <button className="cta-tag">Firebase</button>
-              <button className="cta-tag">Git</button>
-              <button className="cta-tag">Figma</button>
-              <button className="cta-tag">Canva</button>
+              {tools.map((item) => {
+                return <button className="cta-tag">{item.tool}</button>;
+              })}
             </div>
           </div>
         </div>
