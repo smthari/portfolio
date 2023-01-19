@@ -7,7 +7,9 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const [state, handleSubmit] = useForm("mzbqzvwv");
+  // console.log(process.env.REACT_APP_FORM_SPREE);
+
+  const [state, handleSubmit] = useForm(process.env.REACT_APP_FORM_SPREE);
   if (state.succeeded) {
     alert("Form Submitted, I'll get back to you shortly");
   }
