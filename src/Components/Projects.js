@@ -7,8 +7,6 @@ import { AiFillEye } from "react-icons/ai";
 import { projects } from "./Resources/projects";
 
 function Projects() {
-  console.log(projects[1].links);
-
   return (
     <section>
       <div className="projects">

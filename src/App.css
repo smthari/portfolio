@@ -53,6 +53,10 @@ html {
   outline: 1px solid rgba(0, 0, 255, 0.2);
 } */
 
+::selection {
+  background-color: #dddcfd;
+}
+
 body {
   background-color: var(--clr-second);
 }

@@ -23,14 +23,22 @@ function About() {
             <h2 className="skillsSubtitle"> Programming</h2>
             <div className="tags-cta">
               {programming.map((item) => {
-                return <button className="cta-tag">{item.lang}</button>;
+                return (
+                  <button key={item.id} className="cta-tag">
+                    {item.lang}
+                  </button>
+                );
               })}
             </div>
 
             <h2 className="skillsSubtitle">Tools</h2>
             <div className="tags-cta">
               {tools.map((item) => {
-                return <button className="cta-tag">{item.tool}</button>;
+                return (
+                  <button key={item.id} className="cta-tag">
+                    {item.tool}
+                  </button>
+                );
               })}
             </div>
           </div>
