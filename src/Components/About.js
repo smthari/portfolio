@@ -10,7 +10,7 @@ function About() {
             About <mark className="linear">Me</mark>
           </h2>
           <p className="about-subtitle">
-            I'm Frontend Dev based in Mumbai India. Currently pursing BCA 1st
+            I'm Frontend Dev based in Mumbai India. Currently pursuing BCA 1st
             Year
           </p>
           <p className="about-subtitle">
