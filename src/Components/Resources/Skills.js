@@ -25,6 +25,15 @@ export const programming = [
     id: 6,
     lang: "Bootstrap",
   },
+  {
+    id: 7,
+    lang: "C / C++",
+  },
+
+  {
+    id: 8,
+    lang: "PHP",
+  },
 ];
 
 export const tools = [
@@ -59,5 +68,9 @@ export const tools = [
   {
     id: 8,
     tool: "Canva",
+  },
+  {
+    id: 9,
+    tool: "Wordpress",
   },
 ];
