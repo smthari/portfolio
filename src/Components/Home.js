@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../Assets/Images/sumit.png";
+import profile from "../Assets/Images/sumit_new.png";
 import Social from "./Social";
 
 function Home() {
