@@ -1,25 +1,25 @@
 export const programming = [
   {
     id: 1,
-    lang: "HTML",
+    lang: "HTML + CSS / SASS",
   },
   {
     id: 2,
-    lang: "CSS",
+    lang: "JavaScript + TypeScript",
   },
   {
     id: 3,
-    lang: "JavaScript",
+    lang: "React + Redux",
   },
 
   {
     id: 4,
-    lang: "React",
+    lang: "Gatsby",
   },
 
   {
     id: 5,
-    lang: "Gatsby",
+    lang: "Firebase",
   },
   {
     id: 6,
@@ -32,34 +32,39 @@ export const programming = [
 
   {
     id: 8,
-    lang: "PHP",
+    lang: "PHP + MySQL",
   },
 ];
 
+
 export const tools = [
+  {
+    id:0,
+    tool:'ChatGPT',
+  },
   {
     id: 1,
     tool: "NPM",
   },
   {
     id: 2,
-    tool: "Notion",
+    tool: "Git & Github",
   },
   {
-    id: 3,
-    tool: "VS Studio",
+    id:3,
+    tool: 'Jira',
   },
   {
-    id: 4,
-    tool: "Contentful",
+    id:4,
+    tool:'Postman',
   },
   {
     id: 5,
-    tool: "Firebase",
+    tool: "Contentful",
   },
   {
     id: 6,
-    tool: "Git",
+    tool: "Wordpress Development",
   },
   {
     id: 7,
@@ -67,10 +72,15 @@ export const tools = [
   },
   {
     id: 8,
+    tool: "Photopea",
+  },
+  
+  {
+    id: 9,
     tool: "Canva",
   },
   {
-    id: 9,
-    tool: "Wordpress",
+    id: 10,
+    tool: "Adobe Premiere Pro",
   },
 ];

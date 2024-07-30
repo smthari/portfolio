@@ -20,7 +20,7 @@ function About() {
         </div>
         <div className="skills">
           <div className="tags">
-            <h2 className="skillsSubtitle"> Programming</h2>
+            <h2 className="skillsSubtitle"> Programming & Technologies</h2>
             <div className="tags-cta">
               {programming.map((item) => {
                 return (
@@ -31,7 +31,7 @@ function About() {
               })}
             </div>
 
-            <h2 className="skillsSubtitle">Tools</h2>
+            <h2 className="skillsSubtitle">Other</h2>
             <div className="tags-cta">
               {tools.map((item) => {
                 return (
